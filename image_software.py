@@ -2,14 +2,6 @@ from PIL import Image
 import numpy as np
 
 def detect_color_range(image_path, lower_bound, upper_bound):
-    """
-    Detect pixels within a specific RGB color range.
-    
-    Parameters:
-    image_path: path to image file
-    lower_bound: tuple of (R,G,B) minimum values
-    upper_bound: tuple of (R,G,B) maximum values
-    """
     # Read image and convert to RGB
     img = Image.open(image_path).convert('RGB')  # Convert to RGB
     arr = np.array(img)
